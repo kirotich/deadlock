@@ -59,15 +59,60 @@ void input()
       }
 
       printf("%s\n", "Enter Available matrix " );
-      for(row=0; row<processes; row++)
+      for(row=0; row<resources; row++)
       {
-          for(clm=0; clm<resources; clm++)
-          {
-              scanf("%d", &avail[row][clm]);
-          }
-      }
+        scanf("%d" &avail[row]);
 
+      }
+  }
+
+  //Display alloc max and need for each process
+  void show()
+  {
+      int row, clm;
+      printf("Process\t Allocation\t Max\t Available\t");
+
+      for(row=0; row<processess; row++)
+      {
+        printf("\nP%d\t");
+        for(clm=0; clm<resources; clm++)
+        {
+            printf("%d ", alloc[row][clm]);
+        }
+        printf("\t");
+
+        for(clm=0; clm<resources; clm++)
+        {
+            printf("%d ", max[row][clm]);
+        }
+        printf("\t");
+
+        if(row==0)
+        {
+            for(clm=0; clm<resources; clm++) printf("%d ", avail[clm]);
+        }
+      }
+  }
+
+  void calc()
+  {
       
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
