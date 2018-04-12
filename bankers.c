@@ -96,7 +96,29 @@ void input()
 
   void calc()
   {
-      
+      int finish[100], temp, need[100][100], loopFlag=1; k, c1=0;
+      int safe[100];
+      int row, clm;
+
+      //initialise finish array to zero
+      for(row=0; row<processes; row++)
+      {
+        finish[row]=0;
+      }
+
+      //generate need matrix
+      for(row=0; row<processes; row++)
+      {
+        for(clm=0; clm<resources; clm++)
+        {
+            need[row][clm] = max[row][clm];
+        }
+      }
+      printf("\n");
+
+
+
+
 
   }
 
